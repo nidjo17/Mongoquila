@@ -1,10 +1,11 @@
 version: '3.8'
 
 services:
-  xenus-lib:
-    image: abellion/xenus
+  mongoquila-lib:
+    image: nidjo17/mongoquila
     volumes:
-      - .:/usr/src/xenus
+      - .:/usr/src/mongoquila
 
-  xenus-db:
+  mongoquila-db:
     image: mongo:4.0
+

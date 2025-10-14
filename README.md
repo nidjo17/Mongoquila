@@ -1,25 +1,17 @@
-<p align="center">
-	<a target="_blank" href="https://abellion.github.io/xenus/">
-        <img src="https://res.cloudinary.com/abellion/image/upload/c_scale,w_300/v1535202916/logo_ilpt3s.png" />
-    </a>
-</p>
+<p align="center"><em>Shoot your queries responsibly. A simple and elegant MongoDB ODM.</em></p>
 
-Xenus is a simple and elegent MongoDB ODM.
+**Mongoquila** is a simple and elegant MongoDB ODM for PHP.
 
-- It has built-in and cross framework support for **events** ([Doc](https://abellion.github.io/xenus/#/?id=events))
-- It makes your schema self documented via **document's mutators** ([Doc](https://abellion.github.io/xenus/#/?id=accessing-properties))
-- It includes **fluent methods** to update, delete and insert documents ([Doc](https://abellion.github.io/xenus/#/?id=inserting-amp-updating-documents))
-- It supports **documents' embeding** via an elegent syntax ([Doc](https://abellion.github.io/xenus/#/?id=embedding-documents))
-- It handles **relationships** out of the box ([Doc](https://abellion.github.io/xenus/#/?id=relationships))
-- It provides an elegent **transformation layer** mechanism for your API resources ([Doc](https://abellion.github.io/xenus/#/?id=resources))
+> **Note:** This is a fork of [Xenus](https://github.com/abellion/xenus), which has not been maintained for several years. Mongoquila is now maintained and developed further by [nidjo](https://github.com/nidjo17).
 
-If you're working with the Laravel or Lumen framework, take a look at the [Xenus Laravel](https://github.com/abellion/xenus-laravel) integration.
+- It has built-in and cross framework support for **events** ([Doc](https://github.com/nidjo17/mongoquila#events))
+- It makes your schema self documented via **document's mutators** ([Doc](https://github.com/nidjo17/mongoquila#accessing-properties))
+- It includes **fluent methods** to update, delete and insert documents ([Doc](https://github.com/nidjo17/mongoquila#inserting--updating-documents))
+- It supports **documents' embeding** via an elegant syntax ([Doc](https://github.com/nidjo17/mongoquila#embedding-documents))
+- It handles **relationships** out of the box ([Doc](https://github.com/nidjo17/mongoquila#relationships))
+- It provides an elegant **transformation layer** mechanism for your API resources ([Doc](https://github.com/nidjo17/mongoquila#resources))
 
-## Learning Xenus
+## Learning Mongoquila
 
-The documentation is available at https://abellion.github.io/xenus
-
-## License
-
-Xenus is licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The documentation is available in the [docs directory](./docs/README.md).
 
