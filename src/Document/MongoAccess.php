@@ -2,6 +2,10 @@
 
 namespace Xenus\Document;
 
+use MongoDB\BSON\Document;
+use MongoDB\BSON\PackedArray;
+use stdClass;
+
 trait MongoAccess
 {
     /**
@@ -10,7 +14,7 @@ trait MongoAccess
      * @return array|object The document as array
      */
     #[\ReturnTypeWillChange]
-    public function bsonSerialize()
+    public function bsonSerialize(): array|stdClass|Document|PackedArray
     {
         return $this->document;
     }
