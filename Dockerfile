@@ -10,9 +10,9 @@ RUN apt-get update \
 RUN pecl install mongodb-1.2.0 \
 && docker-php-ext-enable mongodb
 
-# Create Xenus dir
-RUN mkdir -p /usr/src/xenus
-WORKDIR /usr/src/xenus
+# Create mongoquila dir
+RUN mkdir -p /usr/src/mongoquila
+WORKDIR /usr/src/mongoquila
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.2.17

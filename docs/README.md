@@ -1,17 +1,18 @@
 # Getting started
 
-__Xenus__ is a simple yet powerfull ODM for MongoDB.
+__mongoquila__ is a simple yet powerful ODM for MongoDB.
+_Forked from Xenus, now maintained by nidjo17._
 
 ## Installation
 
-Xenus requires PHP version >= 7.1, or version >= 8.0, and the MongoDB driver version 1.2 or higher.
+mongoquila requires PHP version >= 7.1, or version >= 8.0, and the MongoDB driver version 1.2 or higher.
 
 Make sure to install first the MongoDB driver : http://php.net/manual/en/mongodb.installation.php
 
 Once installed, run the following from your project root :
 
 ```bash
-composer require abellion/xenus
+composer require nidjo17/mongoquila
 ```
 
 ## First steps

@@ -1,7 +1,7 @@
 <phpunit>
     <php>
-        <env name="MONGODB_URI" value="mongodb://xenus-db:27017/?serverSelectionTimeoutMS=100"/>
-        <env name="MONGODB_DATABASE" value="xenus"/>
+        <env name="MONGODB_URI" value="mongodb://mongoquila-db:27017/?serverSelectionTimeoutMS=100"/>
+        <env name="MONGODB_DATABASE" value="mongoquila"/>
     </php>
 
     <testsuites>
@@ -10,3 +10,4 @@
         </testsuite>
     </testsuites>
 </phpunit>
+
