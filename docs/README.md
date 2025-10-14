@@ -5,7 +5,7 @@ _Forked from Xenus, now maintained by nidjo17._
 
 ## Installation
 
-mongoquila requires PHP version >= 7.1, or version >= 8.0, and the MongoDB driver version 1.2 or higher.
+mongoquila requires **PHP version >= 8.1** and the **MongoDB driver version >= 2.0**.
 
 Make sure to install first the MongoDB driver : http://php.net/manual/en/mongodb.installation.php
 
