@@ -3,18 +3,27 @@
 namespace Xenus;
 
 use IteratorIterator;
+use MongoDB\BSON\Int64;
+use MongoDB\Driver\CursorId;
+use MongoDB\Driver\CursorInterface;
+use MongoDB\Driver\Server;
 
-class Cursor extends IteratorIterator
+class Cursor extends IteratorIterator implements CursorInterface
 {
     use Concerns\HasCollection;
+
+
+    public function key(): ?int
+    {
+        return parent::key();
+    }
 
     /**
      * Return the current iterator element
      *
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
-    public function current()
+    public function current(): object|array|null
     {
         $document = parent::current();
 
@@ -30,7 +39,8 @@ class Cursor extends IteratorIterator
      *
      * @return array
      */
-    public function toArray()
+    public function toArray(): array
+
     {
         $documents = [];
 
@@ -52,5 +62,25 @@ class Cursor extends IteratorIterator
     public function __call(string $name, array $arguments)
     {
         return call_user_func_array([$this->getInnerIterator(), $name], $arguments);
+    }
+
+    public function getId(): Int64
+    {
+        return $this->getInnerIterator()->getId();
+    }
+
+    public function getServer(): Server
+    {
+        return $this->getInnerIterator()->getServer();
+    }
+
+    public function isDead(): bool
+    {
+        return $this->getInnerIterator()->isDead();
+    }
+
+    public function setTypeMap(array $typemap): void
+    {
+        $this->getInnerIterator()->setTypeMap($typemap);
     }
 }
