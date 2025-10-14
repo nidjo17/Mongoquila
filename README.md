@@ -11,6 +11,12 @@
 - It handles **relationships** out of the box ([Doc](https://github.com/nidjo17/mongoquila#relationships))
 - It provides an elegant **transformation layer** mechanism for your API resources ([Doc](https://github.com/nidjo17/mongoquila#resources))
 
+## Requirements
+
+- PHP >= 8.1
+- MongoDB PHP extension >= 2.0
+- mongodb/mongodb library >= 2.0
+
 ## Learning Mongoquila
 
 The documentation is available in the [docs directory](./docs/README.md).
