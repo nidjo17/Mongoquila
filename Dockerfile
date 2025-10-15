@@ -1,4 +1,4 @@
-FROM php:7.1-cli
+FROM php:8.1-cli
 
 # Update system and install libs
 RUN apt-get update \
@@ -7,7 +7,7 @@ RUN apt-get update \
 && apt-get clean
 
 # Install / enable PHP extensions
-RUN pecl install mongodb-1.2.0 \
+RUN pecl install mongodb \
 && docker-php-ext-enable mongodb
 
 # Create mongoquila dir

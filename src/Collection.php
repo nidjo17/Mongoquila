@@ -8,6 +8,7 @@ use MongoDB\Collection as BaseCollection;
 use Xenus\CollectionConfiguration as Configuration;
 
 class Collection extends BaseCollection
+
 {
     use Concerns\HasEvents;
     use Concerns\HasConvenientWrites;
@@ -46,7 +47,7 @@ class Collection extends BaseCollection
      *
      * @return \Xenus\Cursor
      */
-    public function find($filter = [], array $options = [])
+    public function find($filter = [], array $options = []): \MongoDB\Driver\CursorInterface
     {
         return (new Cursor(parent::find($filter, $options)))->connect($this);
     }
@@ -59,7 +60,7 @@ class Collection extends BaseCollection
      *
      * @return array|object|null
      */
-    public function findOne($filter = [], array $options = [])
+    public function findOne($filter = [], array $options = []): object|array|null
     {
         if ($filter instanceof ObjectID) {
             $filter = ['_id' => $filter];
@@ -82,7 +83,7 @@ class Collection extends BaseCollection
      *
      * @return array|object|null
      */
-    public function findOneAndDelete($filter = [], array $options = [])
+    public function findOneAndDelete($filter = [], array $options = []): object|array|null
     {
         if ($filter instanceof ObjectID) {
             $filter = ['_id' => $filter];
@@ -106,7 +107,7 @@ class Collection extends BaseCollection
      *
      * @return array|object|null
      */
-    public function findOneAndUpdate($filter, $update, array $options = [])
+    public function findOneAndUpdate($filter, $update, array $options = []): object|array|null
     {
         if ($filter instanceof ObjectID) {
             $filter = ['_id' => $filter];
@@ -130,7 +131,7 @@ class Collection extends BaseCollection
      *
      * @return array|object|null
      */
-    public function findOneAndReplace($filter, $replacement, array $options = [])
+    public function findOneAndReplace($filter, $replacement, array $options = []): object|array|null
     {
         if ($filter instanceof ObjectID) {
             $filter = ['_id' => $filter];
@@ -153,7 +154,7 @@ class Collection extends BaseCollection
      *
      * @return \MongoDB\DeleteResult
      */
-    public function deleteOne($filter, array $options = [])
+    public function deleteOne($filter, array $options = []): \MongoDB\DeleteResult
     {
         if ($filter instanceof ObjectID) {
             $filter = ['_id' => $filter];
@@ -171,7 +172,7 @@ class Collection extends BaseCollection
      *
      * @return \MongoDB\UpdateResult
      */
-    public function updateOne($filter, $update, array $options = [])
+    public function updateOne($filter, $update, array $options = []): \MongoDB\UpdateResult
     {
         if ($filter instanceof ObjectID) {
             $filter = ['_id' => $filter];
@@ -189,7 +190,7 @@ class Collection extends BaseCollection
      *
      * @return \MongoDB\UpdateResult
      */
-    public function replaceOne($filter, $replacement, array $options = [])
+    public function replaceOne($filter, $replacement, array $options = []): \MongoDB\UpdateResult
     {
         if ($filter instanceof ObjectID) {
             $filter = ['_id' => $filter];
